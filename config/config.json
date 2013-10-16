@@ -2,5 +2,8 @@
     "domain":{
         "host": "127.0.0.1",
         "port": "8000"
+    },
+    "mongoose":{
+        "uri": "mongodb://localhost:8100"
     }
 }
