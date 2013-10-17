@@ -6,7 +6,7 @@ var db = mongoose.connection;
 db.on('open', function(){
     logger.info('MongoDB started on uri: ' + config.get('mongoose:uri'));
 });
-db.on('error', function(error){
+db.on('error', function(){
     logger.error('Failed to connect');
 });
 
