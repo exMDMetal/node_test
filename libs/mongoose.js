@@ -3,7 +3,7 @@ var config = require('config');
 var logger = require('./logger')(module);
 
 var db = mongoose.connection;
-db.on('open', function(){
+db.once('open', function(){
     logger.info('MongoDB started on uri: ' + config.get('mongoose:uri'));
 });
 db.on('error', function(){
