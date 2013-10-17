@@ -7,7 +7,7 @@ var logger    = require('libs/logger')(module);
 
 var app = express();
 
-app.use(express.favicon());
+app.use(express.favicon(path.join(__dirname, '/static/image/favicon.ico')));
 app.use(express.bodyParser());
 app.use(express.cookieParser());
 app.use(express.methodOverride());
