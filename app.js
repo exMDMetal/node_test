@@ -18,6 +18,8 @@ if (app.get('env') == 'development') {
     app.use(express.logger('default'));
 }
 
+require('routes')(app);
+
 http.createServer(app).listen(config.get('domain:port'), config.get('domain:host'), function(){
     logger.info('Server started. Host: ' + config.get('domain:port') + '/ Port: ' + config.get('domain:port'));
 });
