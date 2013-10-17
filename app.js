@@ -6,7 +6,6 @@ var config    = require('config');
 var logger    = require('libs/logger')(module);
 
 var app = express();
-var develop_mod = app.get('env') == 'development';
 
 app.use(express.favicon());
 app.use(express.bodyParser());
@@ -15,7 +14,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '/static')));
 
-if (develop_mod) {
+if (app.get('env') == 'development') {
     app.use(express.logger('dev'));
 } else {
     app.use(express.logger('default'));
