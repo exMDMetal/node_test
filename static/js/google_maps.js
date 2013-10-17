@@ -8,10 +8,4 @@ function initialize() {
     var map = new google.maps.Map(document.getElementById("map-canvas"),
         mapOptions);
 }
-google.maps.event.addDomListener(window, 'load', initialize);/**
- * Created with JetBrains PhpStorm.
- * User: ibelous
- * Date: 17.10.13
- * Time: 18:54
- * To change this template use File | Settings | File Templates.
- */
+google.maps.event.addDomListener(window, 'load', initialize);
