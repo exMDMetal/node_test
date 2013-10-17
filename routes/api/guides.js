@@ -1,10 +1,12 @@
 //GET
 exports.getAll = function(req, res){
-    res.send('API is not ready');
+    var testData = require('tests/guides');
+    res.send(testData);
 }
 
 exports.getCurrentGuide = function(req, res){
-    res.send('API is not ready');
+    var testData = require('tests/guides');
+    res.send(testData[req.params.id]);
 }
 
 //POST

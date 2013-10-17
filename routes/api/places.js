@@ -1,18 +1,22 @@
 //GET
 exports.getTypes = function(req, res){
-    res.send('Get all types');
+    var testData = require('tests/places');
+    res.send(testData);
 }
 
 exports.getCategory = function(req, res){
-    res.send('Get all category in current type');
+    var testData = require('tests/places');
+    res.send(testData[req.params.type]);
 }
 
 exports.getCurrentCategory = function(req, res){
-    res.send('Get all places in current category');
+    var testData = require('tests/places');
+    res.send(testData[req.params.type][req.params.category]);
 }
 
 exports.getPlace = function(req, res){
-    res.send('Get current place');
+    var testData = require('tests/places');
+    res.send(testData[req.params.type][req.params.category][req.params.place]);
 }
 
 
