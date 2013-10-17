@@ -5,8 +5,6 @@ var path      = require('path');
 var config    = require('config');
 var logger    = require('libs/logger')(module);
 
-//
-
 var app = express();
 
 app.use(express.favicon());
