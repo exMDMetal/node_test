@@ -1,8 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta charset=utf-8>
+    <title>City Travel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxOwdq0IP9pMORhjZWHTQakbGOSO78iPs&sensor=false"></script>
+    <script type="text/javascript" src="js/google_maps.js"></script>
 </head>
 <body>
+    <header class="well">
+        <h1 class="logo">CITY TRAVEL</h1>
+        <form class="form-search main-search">
+            <input type="text" class="input-medium search-query">
+            <button type="submit" class="btn">Поиск</button>
+        </form>
+    </header>
+    <div id="map-canvas"/>
+    <footer>
+    </footer>
 </body>
 </html>
