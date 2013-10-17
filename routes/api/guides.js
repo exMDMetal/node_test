@@ -1,11 +1,11 @@
 //GET
 exports.getAll = function(req, res){
-    var testData = require('tests/guides');
+    var testData = require('tests/simulate_data/guides');
     res.send(testData);
 }
 
 exports.getCurrentGuide = function(req, res){
-    var testData = require('tests/guides');
+    var testData = require('tests/simulate_data/guides');
     res.send(testData[req.params.id]);
 }
 

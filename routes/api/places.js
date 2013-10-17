@@ -1,21 +1,21 @@
 //GET
 exports.getTypes = function(req, res){
-    var testData = require('tests/places');
+    var testData = require('tests/simulate_data/places');
     res.send(testData);
 }
 
 exports.getCategory = function(req, res){
-    var testData = require('tests/places');
+    var testData = require('tests/simulate_data/places');
     res.send(testData[req.params.type]);
 }
 
 exports.getCurrentCategory = function(req, res){
-    var testData = require('tests/places');
+    var testData = require('tests/simulate_data/places');
     res.send(testData[req.params.type][req.params.category]);
 }
 
 exports.getPlace = function(req, res){
-    var testData = require('tests/places');
+    var testData = require('tests/simulate_data/places');
     res.send(testData[req.params.type][req.params.category][req.params.place]);
 }
 
