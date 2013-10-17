@@ -7,6 +7,7 @@ var logger    = require('libs/logger')(module);
 
 var app = express();
 var develop_mod = app.get('env') == 'development';
+
 app.use(express.favicon());
 app.use(express.bodyParser());
 app.use(express.cookieParser());
