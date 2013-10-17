@@ -1,8 +1,9 @@
-var express  = require('express');
-var http     = require('http');
-var path     = require('path');
-var config   = require('config');
-var logger   = require('libs/logger')(module);
+var express   = require('express');
+var http      = require('http');
+var mongoose  = require('libs/mongoose');
+var path      = require('path');
+var config    = require('config');
+var logger    = require('libs/logger')(module);
 
 var app = express();
 app.use(express.favicon());

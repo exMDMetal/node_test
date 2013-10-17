@@ -4,6 +4,13 @@
         "port": "8000"
     },
     "mongoose":{
-        "uri": "mongodb://localhost:8100"
+        "uri": "mongodb://localhost:8100",
+        "options": {
+            "server": {
+                "socketOptions": {
+                    "keepAlive": 1
+                }
+            }
+        }
     }
 }
