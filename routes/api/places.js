@@ -36,7 +36,7 @@ exports.editPlace = function(req, res){
 }
 
 
-//DEL
+//DELETE
 exports.deleteType = function(req, res){
     res.send('API is not ready');
 }

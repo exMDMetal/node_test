@@ -23,14 +23,14 @@ function setRoutes(app){
     app.delete('/api/:type/:category/:place', places.deleteCategory); //Delete current place
 
     //guides
-    app.get('/api/guides');
-    app.get('/api/guides/:id');
+    app.get('/api/guides', guides.getAll); //Get all guides
+    app.get('/api/guides/:id', guides.getCurrentGuide); //Get current guide
 
-    app.post('/api/guides/:id');
+    app.post('/api/guides/:id', guides.createGuide); //Create new guide
 
-    app.put('/api/guides/:id');
+    app.put('/api/guides/:id', guides.editGuides); //Edit current guides
 
-    app.delete('/api/guides/:id');
+    app.delete('/api/guides/:id', guides.deleteGuide); //Delete current guides
 
 
     //Errors handlers
