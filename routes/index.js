@@ -5,6 +5,7 @@ var places = require('./api/places');
 var guides = require('./api/guides');
 
 function setRoutes(app){
+
     //API
     //places
     app.get('/api/type', places.getTypes); //Get all types
