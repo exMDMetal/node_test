@@ -23,5 +23,5 @@ if (app.get('env') == 'development') {
 require('routes')(app);
 
 http.createServer(app).listen(config.get('domain:port'), config.get('domain:host'), function(){
-    logger.info('Server started. Host: ' + config.get('domain:port') + '/ Port: ' + config.get('domain:port'));
+    logger.info('Server started. Host: ' + config.get('domain:host') + '/ Port: ' + config.get('domain:port'));
 });
