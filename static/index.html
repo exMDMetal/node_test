@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  lang="ua" ng-app="citytravelApp">
 <head>
     <meta charset=utf-8>
     <title>City Travel</title>
@@ -8,18 +8,28 @@
     <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxOwdq0IP9pMORhjZWHTQakbGOSO78iPs&sensor=false"></script>
-    <script type="text/javascript" src="js/google_maps.js"></script>
+    <script type="text/javascript" src="js/angular/angular.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="js/Application/application.js"></script>
+    <script type="text/javascript" src="js/Application/Controllers/MapCtrl.js"></script>
+    <script type="text/javascript" src="js/Application/Controllers/FooterCtrl.js"></script>
+    <script type="text/javascript" src="js/Application/Controllers/HeaderCtrl.js"></script>
+
+
 </head>
 <body>
-    <header class="well">
-        <h1 class="logo">CITY TRAVEL</h1>
-        <form class="form-search main-search">
-            <input type="text" class="input-medium search-query">
-            <button type="submit" class="btn">Поиск</button>
-        </form>
-    </header>
-    <div id="map-canvas"/>
-    <footer>
-    </footer>
+<header class="well" ng-controller="HeaderCtrl">
+    <h1 class="logo">CITY TRAVEL</h1>
+    <form class="form-search main-search">
+        <input type="text" class="input-medium search-query" name="serch" ng-model="text"  ng-change="serchPlaces()">
+        <button type="submit" class="btn">Поиск</button>
+    </form>
+</header>
+<div id="map-canvas"></div>
+<div ng-view></div>
+<footer ng-controller="FooterCtrl">
+    <p>{{copyright}}</p>
+</footer>
 </body>
+<script type="text/javascript" src="js/google_maps.js"></script>
 </html>
